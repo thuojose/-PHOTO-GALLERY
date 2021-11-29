@@ -35,7 +35,7 @@ class Location(models.Model):
     #     return updated
     
 class Image(models.Model):
-    image=CharField('image')
+    image=CloudinaryField('image')
     name=models.CharField(max_length =30)
     description=models.TextField()
     category=models.ForeignKey(Category,on_delete=models.CASCADE)

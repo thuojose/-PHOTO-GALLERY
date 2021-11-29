@@ -28,3 +28,9 @@ def past_photos(request,past_date):
     if date == dt.date.today():
         return redirect(today_photos)
     return render(request,'all-photos/past-photos.html',{"date":date})
+
+def category(request,category_id):
+    photos=Image.objects.filter(category_id=category_id)
+
+    return render(request,'category.html',{"photos":photos})
+

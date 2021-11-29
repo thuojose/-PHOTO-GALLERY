@@ -34,3 +34,7 @@ def category(request,category_id):
 
     return render(request,'category.html',{"photos":photos})
 
+def location(request,location_id):
+    photos=Image.objects.filter(location_id=location_id)
+
+    return render(request,'location.html',{"photos":photos})

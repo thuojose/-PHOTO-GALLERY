@@ -10,7 +10,7 @@ urlpatterns=[
     url(r'^archives/(\d{4}-\d{2}-\d{2})/$',views.past_photos,name = 'pastPhotos'),
     url(r'^category/(\d+)',views.category,name='category'),
     url(r'^location/(\d+)',views.location,name='location'),
-    
+     url(r'^imagedetails/(\d+)',views.imagedetails,name='imagedetails'),
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
